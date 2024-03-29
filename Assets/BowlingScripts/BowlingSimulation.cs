@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class BowlingSimulation : MonoBehaviour
 {
-
+    // this is a transform in the scene for usshi'fang to specify the initial velocity of the bowling ball.
+    [Tooltip("Forward direction to be used as test initial direction.")]
     public Transform testVelocityDirection;
+    [Tooltip("How fast the test ball will go?")]
     public float testVelocityMagnitude;
 
     public Rigidbody testBowlingBall;
@@ -15,7 +17,7 @@ public class BowlingSimulation : MonoBehaviour
         StartCoroutine(PendTestLaunch());
     }
 
-
+    // wait for 2 seconds and deliver the ball
     IEnumerator PendTestLaunch()
     {
         yield return new WaitForSeconds(2f);
@@ -24,9 +26,9 @@ public class BowlingSimulation : MonoBehaviour
         //testBowlingBall.useGravity = true;
         yield return null;
 
-        Launch(testVelocityDirection.forward * testVelocityMagnitude);
+        Deliver(testVelocityDirection.forward * testVelocityMagnitude);
     }
-    private void Launch(Vector3 initialVelcity)
+    private void Deliver(Vector3 initialVelcity)
     {
         testBowlingBall.AddForce(initialVelcity, ForceMode.VelocityChange);
     }
