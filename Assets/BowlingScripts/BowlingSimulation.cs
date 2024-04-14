@@ -17,7 +17,7 @@ public class BowlingSimulation : MonoBehaviour
         StartCoroutine(PendTestLaunch());
     }
 
-    // wait for 2 seconds and deliver the ball
+    // wait for 2 seconds and launch the ball
     IEnumerator PendTestLaunch()
     {
         yield return new WaitForSeconds(2f);
@@ -26,9 +26,9 @@ public class BowlingSimulation : MonoBehaviour
         //testBowlingBall.useGravity = true;
         yield return null;
 
-        Deliver(testVelocityDirection.forward * testVelocityMagnitude);
+        Launch(testVelocityDirection.forward * testVelocityMagnitude);
     }
-    private void Deliver(Vector3 initialVelcity)
+    private void Launch(Vector3 initialVelcity)
     {
         testBowlingBall.AddForce(initialVelcity, ForceMode.VelocityChange);
     }
