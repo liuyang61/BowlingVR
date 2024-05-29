@@ -481,6 +481,61 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3d6691c84194f0f48a172870da5e4724, type: 3}
   m_PrefabInstance: {fileID: 275998982}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &754449121
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 754449122}
+  - component: {fileID: 754449123}
+  m_Layer: 0
+  m_Name: ResetPins
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &754449122
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754449121}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9030597180588226425}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &754449123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754449121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd67da486b24d4247a948908ad490c3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allPins:
+  - {fileID: 3714674296648353720}
+  - {fileID: 6618481215368852950}
+  - {fileID: 9135910952849967817}
+  - {fileID: 4473652969564466001}
+  - {fileID: 7334739589555589548}
+  - {fileID: 8692157568491245575}
+  - {fileID: 5769641661287660957}
+  - {fileID: 7712212746291612174}
+  - {fileID: 7535788590494846881}
+  - {fileID: 5641529796196653027}
 --- !u!4 &761666343 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3d6691c84194f0f48a172870da5e4724, type: 3}
@@ -1034,6 +1089,7 @@ GameObject:
   - component: {fileID: 5602794672234566351}
   - component: {fileID: 2015114425783695782}
   - component: {fileID: 5020644388921289713}
+  - component: {fileID: 5641529796196653027}
   m_Layer: 0
   m_Name: Pin
   m_TagString: Untagged
@@ -1192,6 +1248,7 @@ GameObject:
   - component: {fileID: 3714674296648353719}
   - component: {fileID: 1285642776126552126}
   - component: {fileID: 148943606694494840}
+  - component: {fileID: 3714674296648353720}
   m_Layer: 0
   m_Name: Pin
   m_TagString: Untagged
@@ -1341,6 +1398,7 @@ GameObject:
   - component: {fileID: 4473652969564466000}
   - component: {fileID: 765821122286997977}
   - component: {fileID: 721095835997463093}
+  - component: {fileID: 4473652969564466001}
   m_Layer: 0
   m_Name: Pin
   m_TagString: Untagged
@@ -1695,6 +1753,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3714674296648353720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303437175801041019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b52a3210420b1d4cbd150674a6f154c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &3838683262131219040
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1798,6 +1868,7 @@ GameObject:
   - component: {fileID: 1744667851713905648}
   - component: {fileID: 6618481215368852949}
   - component: {fileID: 250231808893958020}
+  - component: {fileID: 6618481215368852950}
   m_Layer: 0
   m_Name: Pin
   m_TagString: Untagged
@@ -1962,6 +2033,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4473652969564466001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944294359366524034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b52a3210420b1d4cbd150674a6f154c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4486979343819929671
 GameObject:
   m_ObjectHideFlags: 0
@@ -1975,6 +2058,7 @@ GameObject:
   - component: {fileID: 2227871948869472028}
   - component: {fileID: 5769641661287660956}
   - component: {fileID: 2604747434824158227}
+  - component: {fileID: 5769641661287660957}
   m_Layer: 0
   m_Name: Pin
   m_TagString: Untagged
@@ -2022,6 +2106,7 @@ GameObject:
   - component: {fileID: 4888928891955972666}
   - component: {fileID: 3900424391754527356}
   - component: {fileID: 7535788590494846880}
+  - component: {fileID: 7535788590494846881}
   m_Layer: 0
   m_Name: Pin
   m_TagString: Untagged
@@ -2252,6 +2337,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 249304944105349343}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &5641529796196653027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249304944105349343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b52a3210420b1d4cbd150674a6f154c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &5769641661287660956
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2275,6 +2372,18 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &5769641661287660957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4486979343819929671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b52a3210420b1d4cbd150674a6f154c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5813289126881135409
 GameObject:
   m_ObjectHideFlags: 0
@@ -2288,6 +2397,7 @@ GameObject:
   - component: {fileID: 4164514127403543266}
   - component: {fileID: 8692157568491245574}
   - component: {fileID: 4693658583262347064}
+  - component: {fileID: 8692157568491245575}
   m_Layer: 0
   m_Name: Pin
   m_TagString: Untagged
@@ -2327,6 +2437,7 @@ GameObject:
   - component: {fileID: 3010650039320651434}
   - component: {fileID: 7104863168494112333}
   - component: {fileID: 5397919478801328178}
+  - component: {fileID: 7712212746291612174}
   m_Layer: 0
   m_Name: Pin
   m_TagString: Untagged
@@ -2392,6 +2503,18 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &6618481215368852950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3923999532977872553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b52a3210420b1d4cbd150674a6f154c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!33 &6669114863798897278
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2580,6 +2703,7 @@ GameObject:
   - component: {fileID: 2140210652020331016}
   - component: {fileID: 2935924238064208920}
   - component: {fileID: 6572680733671171624}
+  - component: {fileID: 7334739589555589548}
   m_Layer: 0
   m_Name: Pin
   m_TagString: Untagged
@@ -2587,6 +2711,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7334739589555589548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7334739589555589547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b52a3210420b1d4cbd150674a6f154c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &7535788590494846880
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2614,6 +2750,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7535788590494846881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4702555323360073916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b52a3210420b1d4cbd150674a6f154c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!33 &7712212746291612173
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2622,6 +2770,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6531550564017000557}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &7712212746291612174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6531550564017000557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b52a3210420b1d4cbd150674a6f154c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7785436275045640988
 GameObject:
   m_ObjectHideFlags: 0
@@ -2695,6 +2855,8 @@ MonoBehaviour:
   testVelocityDirection: {fileID: 8488495905500058118}
   testVelocityMagnitude: 5
   testBowlingBall: {fileID: 2087711261987422149}
+  bowlingBallStartPosition: {x: 0, y: 0, z: 0}
+  pinsManager: {fileID: 754449123}
 --- !u!4 &8488495905500058118
 Transform:
   m_ObjectHideFlags: 0
@@ -2734,6 +2896,18 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &8692157568491245575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5813289126881135409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b52a3210420b1d4cbd150674a6f154c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8753007216885270178
 GameObject:
   m_ObjectHideFlags: 0
@@ -2763,6 +2937,7 @@ GameObject:
   - component: {fileID: 132420424079023757}
   - component: {fileID: 4879842546496100152}
   - component: {fileID: 9112522866594793064}
+  - component: {fileID: 9135910952849967817}
   m_Layer: 0
   m_Name: Pin
   m_TagString: Untagged
@@ -2788,6 +2963,7 @@ Transform:
   - {fileID: 7268045617248425643}
   - {fileID: 8488495905500058118}
   - {fileID: 1986368156}
+  - {fileID: 754449122}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &9112522866594793064
@@ -2832,6 +3008,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4999029008210383241}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9135910952849967817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8957975650301156607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b52a3210420b1d4cbd150674a6f154c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
