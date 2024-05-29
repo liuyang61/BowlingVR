@@ -11,9 +11,11 @@ public class BowlingSimulation : MonoBehaviour
     public float testVelocityMagnitude;
 
     public Rigidbody testBowlingBall;
+    public Vector3 bowlingBallStartPosition;
 
     public void Start()
     {
+        bowlingBallStartPosition = testBowlingBall.position;
         StartCoroutine(PendTestLaunch());
     }
 
@@ -30,6 +32,22 @@ public class BowlingSimulation : MonoBehaviour
     }
     private void Launch(Vector3 initialVelcity)
     {
+        testBowlingBall.isKinematic = false;
         testBowlingBall.AddForce(initialVelcity, ForceMode.VelocityChange);
+    }
+
+    public PinsManager pinsManager;
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            pinsManager.ResetAllPins();
+
+            testBowlingBall.isKinematic = true;
+            testBowlingBall.position = bowlingBallStartPosition;
+
+            StartCoroutine(PendTestLaunch());
+        }
     }
 }

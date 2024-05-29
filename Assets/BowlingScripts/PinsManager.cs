@@ -16,4 +16,21 @@ public class PinsManager : MonoBehaviour
             }
         }
     }
+
+    private void Update()
+    {
+        
+    }
+
+    public void ResetAllPins()
+    {
+        if (allPins.Count > 0)
+        {
+            for (int i = 0; i < allPins.Count; i++)
+            {
+                allPins[i].StartCoroutine(allPins[i].ResetPosAndRot());
+
+            }
+        }
+    }
 }

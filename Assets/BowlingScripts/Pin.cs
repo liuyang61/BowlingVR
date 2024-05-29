@@ -5,14 +5,10 @@ using UnityEngine;
 public class Pin : MonoBehaviour
 {
     Rigidbody myRigidbody;
-    MeshCollider myMeshCollider;
 
     private void Awake()
     {
         myRigidbody = GetComponent<Rigidbody>();
-        myMeshCollider = GetComponent<MeshCollider>();
-
-        myRigidbody.isKinematic = true;
     }
 
     Vector3 iniPos;
@@ -22,17 +18,17 @@ public class Pin : MonoBehaviour
     {
         iniPos = transform.position;
         iniRot = transform.rotation;
-
-        myRigidbody.isKinematic = false;
-
-        StartCoroutine(PendResetPosAndRot());
     }
 
-    IEnumerator PendResetPosAndRot()
+    public IEnumerator ResetPosAndRot()
     {
-        yield return null;
+        myRigidbody.isKinematic = true;
 
         myRigidbody.position = iniPos;
         myRigidbody.rotation = iniRot;
+
+        yield return null;
+
+        myRigidbody.isKinematic = false;
     }
 }
