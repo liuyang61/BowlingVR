@@ -11,11 +11,16 @@ public class BowlingSimulation : MonoBehaviour
     public float testVelocityMagnitude;
 
     public Rigidbody testBowlingBall;
-    public Vector3 bowlingBallStartPosition;
+    public Transform bowlingBallStartPositionPlaceholder;
+
+    public GameObject bowlingBallModelFolder; // set this gameobject active or deactive to show/hide the model
 
     public void Start()
     {
-        bowlingBallStartPosition = testBowlingBall.position;
+        bowlingBallModelFolder.SetActive(false);
+        testBowlingBall.isKinematic = true;
+        testBowlingBall.position = bowlingBallStartPositionPlaceholder.position;
+
         StartCoroutine(PendTestLaunch());
     }
 
@@ -24,14 +29,17 @@ public class BowlingSimulation : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
 
-        testBowlingBall.isKinematic = false;
-        //testBowlingBall.useGravity = true;
+        testBowlingBall.position = bowlingBallStartPositionPlaceholder.position;
         yield return null;
+
+        testBowlingBall.isKinematic = false;
 
         Launch(testVelocityDirection.forward * testVelocityMagnitude);
     }
     private void Launch(Vector3 initialVelcity)
     {
+        bowlingBallModelFolder.SetActive(true);
+
         testBowlingBall.isKinematic = false;
         testBowlingBall.AddForce(initialVelcity, ForceMode.VelocityChange);
     }
@@ -44,8 +52,8 @@ public class BowlingSimulation : MonoBehaviour
         {
             pinsManager.ResetAllPins();
 
+            bowlingBallModelFolder.SetActive(false);
             testBowlingBall.isKinematic = true;
-            testBowlingBall.position = bowlingBallStartPosition;
 
             StartCoroutine(PendTestLaunch());
         }
