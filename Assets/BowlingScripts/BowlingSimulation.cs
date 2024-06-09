@@ -20,15 +20,11 @@ public class BowlingSimulation : MonoBehaviour
         bowlingBallModelFolder.SetActive(false);
         testBowlingBall.isKinematic = true;
         testBowlingBall.position = bowlingBallStartPositionPlaceholder.position;
-
-        StartCoroutine(PendTestLaunch());
     }
 
     // wait for 2 seconds and launch the ball
-    IEnumerator PendTestLaunch()
+    public IEnumerator LaunchRoutine()
     {
-        yield return new WaitForSeconds(2f);
-
         testBowlingBall.position = bowlingBallStartPositionPlaceholder.position;
         yield return null;
 
@@ -54,8 +50,6 @@ public class BowlingSimulation : MonoBehaviour
 
             bowlingBallModelFolder.SetActive(false);
             testBowlingBall.isKinematic = true;
-
-            StartCoroutine(PendTestLaunch());
         }
     }
 }
