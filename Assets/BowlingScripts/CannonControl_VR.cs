@@ -9,8 +9,12 @@ public class CannonControl_VR : MonoBehaviour
 
     public InputActionReference rightTrigger;
     public InputActionReference rightThumbstick;
+    public InputActionReference resetButton;
+    public InputActionReference changeBowlingBallButton;
 
     private bool rightTriggerDown = false;
+    private bool resetButtonDown = false;
+    private bool changeBowlingBallButtonDown = false;
 
     public float rotationSpeed = 30f; // degree per second
 
@@ -20,11 +24,15 @@ public class CannonControl_VR : MonoBehaviour
     private void OnEnable()
     {
         rightTrigger.action.started += RightTriggerButtonPress;
+        resetButton.action.started += ResetButtonPress;
+        changeBowlingBallButton.action.started += ChangeBowlingBallButtonPress;
     }
 
     private void OnDisable()
     {
         rightTrigger.action.started -= RightTriggerButtonPress;
+        resetButton.action.started -= ResetButtonPress;
+        changeBowlingBallButton.action.started -= ChangeBowlingBallButtonPress;
     }
 
     public enum CannonRotateCommandState
@@ -79,6 +87,17 @@ public class CannonControl_VR : MonoBehaviour
         cannonAxis.Rotate(0, currentRotateSpeed * Time.deltaTime, 0, Space.World);
 
 
+        if(resetButtonDown)
+        {
+            bowlingSimulation.pinsManager.ResetAllPins();
+            bowlingSimulation.testBowlingBall.isKinematic = true;
+            bowlingSimulation.testBowlingBall.position = bowlingSimulation.ballFloatingPositionPlaceholder.position;
+        }
+
+        if(changeBowlingBallButtonDown)
+        {
+            bowlingSimulation.bowlingBallKeyboardChoice.IterateBowlingBallModel();
+        }
 
         //Debug.Log(rightThumbstickValue.ToString());
 
@@ -90,8 +109,20 @@ public class CannonControl_VR : MonoBehaviour
         rightTriggerDown = true;
     }
 
+    public void ResetButtonPress(InputAction.CallbackContext callbackContext)
+    {
+        resetButtonDown = true;
+    }
+
+    public void ChangeBowlingBallButtonPress(InputAction.CallbackContext callbackContext)
+    {
+        changeBowlingBallButtonDown = true;
+    }
+
     private void ResetButtons()
     {
         rightTriggerDown = false;
+        resetButtonDown = false;
+        changeBowlingBallButtonDown = false;
     }
 }

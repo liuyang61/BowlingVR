@@ -21,7 +21,7 @@ public class BowlingBallKeyboardChoice : MonoBehaviour
         }
     }
 
-    private void IterateBowlingBallModel()
+    public void IterateBowlingBallModel()
     {
         currentChoiceIndex++; // currentChoiceIndex = currentChoiceIndex + 1;
 

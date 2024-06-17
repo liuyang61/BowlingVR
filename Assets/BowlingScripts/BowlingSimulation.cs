@@ -13,13 +13,15 @@ public class BowlingSimulation : MonoBehaviour
     public Rigidbody testBowlingBall;
     public Transform bowlingBallStartPositionPlaceholder;
 
+    public Transform ballFloatingPositionPlaceholder;
+
     public GameObject bowlingBallModelFolder; // set this gameobject active or deactive to show/hide the model
 
     public void Start()
     {
-        bowlingBallModelFolder.SetActive(false);
+        //bowlingBallModelFolder.SetActive(false);
         testBowlingBall.isKinematic = true;
-        testBowlingBall.position = bowlingBallStartPositionPlaceholder.position;
+        testBowlingBall.position = ballFloatingPositionPlaceholder.position;
     }
 
     // wait for 2 seconds and launch the ball
@@ -41,14 +43,16 @@ public class BowlingSimulation : MonoBehaviour
     }
 
     public PinsManager pinsManager;
+    public BowlingBallKeyboardChoice bowlingBallKeyboardChoice;
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
             pinsManager.ResetAllPins();
+            testBowlingBall.position = ballFloatingPositionPlaceholder.position;
 
-            bowlingBallModelFolder.SetActive(false);
+            //bowlingBallModelFolder.SetActive(false);
             testBowlingBall.isKinematic = true;
         }
     }
