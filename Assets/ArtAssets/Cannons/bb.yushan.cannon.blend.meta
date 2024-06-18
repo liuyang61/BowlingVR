@@ -3,7 +3,27 @@ guid: 5bc77b474c475584087f5c02def73f05
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bunini
+    second: {fileID: 2100000, guid: e18792c1bcadd154c98847b1457bb513, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ok
+    second: {fileID: 2100000, guid: 278fba5a020e7b14c905ff0e92d3ba7e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: yay
+    second: {fileID: 2100000, guid: 8dc41b7cfb8132e4fbd79f4656be00c5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: yum
+    second: {fileID: 2100000, guid: 6431f59be2c0a5448bac252b7db2a6a5, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

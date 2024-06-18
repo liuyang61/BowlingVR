@@ -25,9 +25,9 @@ public class BowlingSimulation : MonoBehaviour
     }
 
     // wait for 2 seconds and launch the ball
-    public IEnumerator LaunchRoutine()
+    public IEnumerator LaunchRoutine(Vector3 ballLaunchPos)
     {
-        testBowlingBall.position = bowlingBallStartPositionPlaceholder.position;
+        testBowlingBall.position = ballLaunchPos;
         yield return null;
 
         testBowlingBall.isKinematic = false;
@@ -44,6 +44,7 @@ public class BowlingSimulation : MonoBehaviour
 
     public PinsManager pinsManager;
     public BowlingBallKeyboardChoice bowlingBallKeyboardChoice;
+    public CannonChoice cannonChoice;
 
     private void Update()
     {

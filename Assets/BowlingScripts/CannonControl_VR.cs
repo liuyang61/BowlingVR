@@ -48,7 +48,7 @@ public class CannonControl_VR : MonoBehaviour
     {
         if (rightTriggerDown)
         {
-            StartCoroutine(bowlingSimulation.LaunchRoutine());
+            StartCoroutine(bowlingSimulation.LaunchRoutine(bowlingSimulation.cannonChoice.launchPlaceholders[bowlingSimulation.cannonChoice.cannonChoice].position));
         }
 
         Vector2 rightThumbstickValue = rightThumbstick.action.ReadValue<Vector2>();

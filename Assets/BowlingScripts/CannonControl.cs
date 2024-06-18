@@ -49,5 +49,12 @@ public class CannonControl : MonoBehaviour
         }
 
         cannonAxis.Rotate(0, currentRotateSpeed * Time.deltaTime, 0, Space.World);
+
+        if(Input.GetKeyDown(KeyCode.L))
+        {
+            StartCoroutine(bowlingSimulation.LaunchRoutine(bowlingSimulation.cannonChoice.launchPlaceholders[bowlingSimulation.cannonChoice.cannonChoice].position));
+        }
     }
+
+    public BowlingSimulation bowlingSimulation;
 }
